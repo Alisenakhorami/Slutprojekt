@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="Slutproject.css">
+    <script src="js/slutproject.js"></script>
+    <title>Slutproject</title>
+</head>
+<body>
+    <!-- Här är nav/header med logga och länk till andra sidor-->
+    <nav>
+        <img src="Bilder/IQ_Logo_White.svg" class="logga">
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+            
+            <a class="home-link" href="Välkomstsidan.html">Hem</a>
+            <a href="about.html">About</a>
+            <a href="curriculum.html">Curriculum</a>
+            <a href="find-us.html">Find us</a>
+            <a href="apply.html">Apply</a>
+        </div>
+    </nav>
+    <main>
+        <h1><a href="https://www.w3schools.com/html/html_form_input_types.asp">Apply</a></h1>
+
+        <form class="apply-form"><!-- Jag använder detta med samband med java script-->
+            <div class="form-class">
+                <label for="pnummer">Personnummer:</label>
+                <input type="date" id="pnummer" required>        
+            </div>
+            <div class="form-class">
+                <label for="fname">Förnamn:</label>
+                <input type="text" id="fname" required>      
+            </div>    
+            <div class="form-class" >
+                <label for="fname">Efternamn:</label>
+                <input type="text" id="lname" required>
+            </div>
+            <div class="form-class">
+                <label for="C/O">C/O:</label>
+                <input type="text" id="C/O" >     
+            </div>   
+            <div class="form-class">
+                <label for="adress">Adress:</label>
+                <input type="text" id="adress" required>     
+            </div>
+            <div class="form-class">
+                <label for="postnummer">Postnummer:</label>
+                <input type="text" id="postnummer" required>     
+            </div>
+            <div class="form-class">
+                <label for="ort">Ort:</label>
+                <input type="text" id="ort" required>        
+            </div>
+            <div class="form-class">
+                <label for="telefon">Telefon:</label>
+                <input type="tel" id="telefon" required>       
+            </div>
+            <div class="form-class">
+                <label for="e-post">E-post:</label>
+                <input type="email" id="e-post" required>     
+            </div>
+            <p>Hur vill du bli kontaktad?:</p>
+            <div class="form-class">
+                <input type="radio" id="kontakt-1" name="contact" required>
+                <label for="kontakt-1">Telefon</label>
+                <input type="radio" id="kontakt-2" name="contact">
+                <label for="kontakt-2">E-post</label>
+                <input type="radio" id="kontakt-3" name="contact">
+                <label for="kontakt-3">SMS</label>
+            </div>
+            <div class="form-class">
+                <select name="country" id="country" required onchange="showTextfield()">
+                    <option value="sverige">Sverige</option>
+                    <option value="annat">Annat</option>
+                </select>
+                <input type="text" id="otherCountry" hidden>
+            </div>
+
+
+
+            <div class="buttons">   
+                <input type="submit" value="Submit" onclick="submitButton()" class="submit">
+            </div>
+        </form>
+
+    </main>
+    
+</body>
+</html>

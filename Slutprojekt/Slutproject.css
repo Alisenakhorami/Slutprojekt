@@ -1,0 +1,234 @@
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrat;
+}
+nav {
+    height: 60px;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+}
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:end;
+}
+    
+
+.logga{
+    height: 50px;
+    width: 80px;
+    margin-right: auto;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+}
+
+nav a:hover{
+    background-color: rgb(141, 219, 15);
+}
+
+nav label:hover{
+    background-color: rgb(141, 219, 15);
+}
+
+nav svg{
+    fill: white
+}
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+body{
+    background-image: url(Bilder/IQ_Background.png);
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+}
+.index-article{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+
+
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+    padding: 50px;
+}
+
+video{
+    background-color: black;
+    opacity: 0.5;
+}
+
+.about-article{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+
+
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+    padding: 50px;
+}
+a{
+    color: rgb(63, 63, 185);
+    text-decoration: none;
+}
+.about-länk:hover{
+    color: rgb(181, 219, 232);
+}
+article{
+    background-color: rgb(0, 0, 0, 0.7)
+}
+.curriculum-article{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+    padding: 50px;
+}
+
+.custom-ol li:nth-child(4)::before{
+    content: "3.5";
+}
+
+.manual-number {
+    list-style-type: none;
+    padding-left: 0;
+}
+.manual-number::before {
+    content: "3.5";
+    margin-right: 0.5em;
+}
+
+.ul-flytta{
+    padding-left: 40px;
+}
+
+.find-us-grid{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    padding: 50px;
+
+
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+    background-color: rgb(0, 0, 0, 0.7)
+    
+}
+
+.form-class{
+    display: flex;
+    gap: px;
+}
+
+.buttons{
+    margin-top: 10px;
+    text-align: end;
+}
+.apply-form{
+    display: grid;
+    gap: 1.5rem;
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding-left: 25rem;
+    padding-right: 10rem;
+}
+.submit{
+    height: 50px;
+    width: 100px;
+}
+input{
+    background-color: rgb(198, 188, 188);
+}
+@media(max-width: 650px){
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+
+        background-color: black;
+        transition: 0.7s ease-out;
+        height: auto;
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+
+    }
+    .open-sidebar-button, .close-sidebar-button{
+        padding: 20px;
+        display: block;
+    }
+    #sidebar-active:checked ~ .links-container{
+        right: 0;
+    }
+    video{
+        height: 100px;
+        width: 200px;
+    }
+    .index-article{
+        grid-template-columns: 1fr;
+        width: min(75%, 60rem);
+    }
+    .about-article{
+        width: min(75%, 60rem);
+    }
+    .curriculum-article{
+        width: min(75%, 60rem);
+    }
+    iframe{
+        height: 308px;
+        width: 400px;
+    }
+    .apply-form{
+        padding-left: 6rem;
+        width: min(75%, 60rem);
+    }
+    .form-class{
+        gap: none;
+    }
+}
